@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        .header{
+            position: absolute;
+        }
+        .popstar{
+            height: 100px;
+            letter-spacing: 5px;
+            font-size: 30px;
+            position: relative;
+            bottom: -5px;
+            left: 70px;
+            font-weight: bold;
+            color: gray;
+            font-family: Arial, sans-serif;
+        }
+        .o{
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border: 10px solid gray;
+            border-radius: 50%;
+            background: white;
+            position: relative;
+            bottom: -110px;
+            left: 40px;
+            float: left;
+        }
+
+        hr {
+            border: none; /* Убираем границу */
+            background-color: gray; /* Цвет линии */
+            height: 2px; /* Толщина линии */
+            position: relative;
+            top: 150px;
+        }
+        .section{
+            position: relative;
+            float: bottom;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<header class="header">
+
+    <span class="o">
+        <span class="popstar">PopStar</span>
+    </span>
+
+</header>
+
+<hr>
+
+<section class="section">
+
+    <ul class="section_menu">
+        <li>О компании</li>
+        <li>Наши Звездочки</li>
+        <li>Услуги</li>
+        <li>Контакты</li>
+    </ul>
+
+</section>
+
+
+
+<footer>
+
+</footer>
+
+
+
+</body>
+</html>
