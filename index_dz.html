@@ -4,147 +4,160 @@
     <meta charset="UTF-8">
     <title>Float</title>
     <style>
-        *{
+        * {
             font-family: Arial, sans-serif;
-            color: black;
         }
-/*        .header, footer{
-           padding: 15px;
-        }*/
-        .popstar{
-            height: 100px;
-            letter-spacing: 5px;
-            font-size: 30px;
+
+        .site {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /*header*/
+        .header{
             position: relative;
-            bottom: -5px;
-            left: 70px;
-            font-weight: bold;
-            color: gray;
+            display: flex;
+            flex-direction: row;
+            height: 150px;
+            border-bottom: 2px solid black;
         }
-        .o{
+        .header>.o {
+            position: absolute;
             z-index: 1;
-            width: 50px;
-            height: 50px;
-            border: 10px solid gray;
-            border-radius: 50%;
+            top: 50px;
+            margin-left: 20px;
             background: white;
-            position: relative;
-            bottom: -110px;
-            left: 40px;
-            float: left;
+            width: 90px;
+            height: 90px;
+            border: 15px solid grey;
+            border-radius: 50%;
         }
+        .header>h1 {
+            font-size: 60px;
+            margin-left: 150px;
+            position: absolute;
+            bottom: -54px;
+            letter-spacing: 6px;
+        }
+        /*end header*/
 
-        rect{
-            width: 200px;
-            height: 20px;
-            background: gray;
-            position: relative;
-            bottom: 20px;
-            left: 20px;
-            float: right;
+        /*section*/
+        .section {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            border-bottom: 2px solid black;
+            padding-bottom: 60px;
         }
-
-        hr {
-            border: none; /* Убираем границу */
-            background-color: gray; /* Цвет линии */
-            height: 2px; /* Толщина линии */
-            position: relative;
-            top: 150px;
-            left: -150px;
-        }
-
-        .section{
-            position: relative;
-            top: 150px;
-            height: 400px;
-        }
-        .section_div1{
-            font-weight: bold;
-            width: 160px;
-            float: left;
-            box-sizing: border-box;
-            padding: 10px;
-        }
-        li{
-            list-style-type: none;
+        .section_menu {
+            width: 320px;
             text-align: right;
+            margin-top: 70px;
         }
-        .section_div2{
-            width: 450px;
-            float: left;
-            box-sizing: border-box;
-            padding: 10px;
+        .section_menu > ul > li {
+            list-style-type: none;
+            margin-bottom: 10px;
+            font-size: 18px;
         }
-        .section_div3{
-            width: 200px;
-            float: left;
-            box-sizing: border-box;
-            padding: 10px;
+        .section_menu > ul > li > a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
-        footer{
+        .section_text {
+            width: 800px;
+            margin: 0 20px 0 20px;
+            margin-top: 70px;
+        }
+        .section_news {
             position: relative;
-            float: bottom;
+            width: 50%;
         }
+        .rect {
+            position: absolute;
+            width: 292px;
+            top: 0;
+            height: 30px;
+            background: gray;
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .section_news > h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .section_news_text > .date {
+            font-weight: bold;
+            margin-top: 35px;
+        }
+
+        .section_news_text > .news_text {
+            margin-top: -10px;
+        }
+        /*end section*/
+        /*footer*/
+        .footer {
+            position: relative;
+        }
+        .footer_text {
+            position: absolute;
+            right: 175px;
+            top: -10px;
+        }
+        /*end footer*/
     </style>
 </head>
 <body>
 
+<div class="site">
 
+    <header class="header">
+        <div class="o"></div>
+        <h1 class="popstar">PopStar</h1>
+    </header>
 
-<header class="header">
+    <section class="section">
+        <aside class="section_menu">
+            <ul>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Наши Звездочки</a></li>
+                <li><a href="">Услуги</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </aside>
+        <div class="section_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis delectus distinctio dolorum, eligendi ex explicabo ipsum laudantium molestiae nam nemo neque non officiis pariatur quas quia quisquam recusandae rem sapiente totam? Consectetur cumque facilis illum mollitia obcaecati, repellendus repudiandae vero! Ad adipisci at aut debitis dignissimos dolorem doloremque dolores earum eos esse et facilis, harum id illo ipsa laudantium magni nam natus nihil numquam perspiciatis placeat provident qui totam velit, vitae voluptates voluptatibus? A, assumenda blanditiis dolorum et libero nam officiis possimus qui, quod reprehenderit repudiandae sapiente vero voluptates. Assumenda culpa debitis eveniet ex facilis ipsam non sapiente vero!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam deleniti incidunt nulla numquam officia unde velit! Dignissimos doloribus exercitationem necessitatibus odio ut. Corporis, cumque eos error nesciunt nulla numquam, officia placeat possimus quasi reprehenderit similique totam ullam ut. Consequuntur dicta est illo placeat sapiente. Aliquam animi asperiores nulla quidem.</p>
+        </div>
+        <div class="section_news">
+            <div class="rect"></div>
+            <h3>Новости</h3>
+            <div class="section_news_text">
+                <p class="date">
+                    02.03.2003
+                </p>
+                <p class="news_text">
+                    На прошлей неделе услугами нашей компании воспользовались 20 начинающих звезд!
+                </p>
+            </div>
+            <div class="section_news_text">
+                <p class="date">
+                    20.02.2003
+                </p>
+                <p class="news_text">
+                    К нам пришел работать лучший продюссер! Мы поднимаем цены на 20%
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <span class="o">
-        <span class="popstar">PopStar</span>
-    </span>
+    <footer class="footer">
+        <div class="rect"></div>
+        <p class="footer_text">2003 (c) PopStar</p>
+    </footer>
 
-</header>
-
-<hr>
-
-<section class="section">
-
-
-
-    <div class="section_div1">
-        <ul class="section_menu">
-            <li>О компании</li>
-            <li>Наши Звездочки</li>
-            <li>Услуги</li>
-            <li>Контакты</li>
-        </ul>
-    </div>
-
-    <div class="section_div2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aperiam aut autem consectetur fugiat quisquam sapiente vero. Accusantium adipisci aspernatur consequatur dignissimos excepturi fugiat iste libero, numquam omnis possimus quod rerum sequi soluta tempore ut? Beatae, consectetur dicta illo incidunt iusto magnam, numquam officiis quae rem sapiente sint, voluptate.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda dolores ea laboriosam magni minus nisi officiis porro, quibusdam tempora ullam voluptas? Earum, facilis officiis.</p>
-    </div>
-
-    <div class="section_div3">
-        <rect></rect>
-        <p><strong>Новости</strong></p>
-        <p>
-            <strong>02.03.2003</strong><br>
-            Напрошлой неделе услугами нашей компании воспользовались 20 начинающих звезд!
-        </p>
-        <p>
-            <strong>20.02.2003</strong><br>
-            К нам пришел работать лучший продюссер! Мы поднимаем цены на 20%!
-        </p>
-    </div>
-
-</section>
-
-<hr>
-
-<footer>
-    <div>
-            <rect style="bottom: 20px"></rect>
-    <p>2003 (c) Popstar</p>
-    </div>
-
-</footer>
-
-
-
+</div>
 </body>
 </html>
